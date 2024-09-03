@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380678739176",
+    "project_id": "linkyoufluttertask",
+    "storage_bucket": "linkyoufluttertask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380678739176:android:05ac29325a4769e81e655d",
+        "android_client_info": {
+          "package_name": "com.example.linkyou_flutter_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr4lC61Ed8WGfpFmbYIV7Da8PncUfyDaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

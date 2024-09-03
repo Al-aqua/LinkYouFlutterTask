@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:linkyou_flutter_task/api.dart';
 import 'package:linkyou_flutter_task/auth_service.dart';
 
 class LoginPage extends StatelessWidget {
@@ -6,8 +7,23 @@ class LoginPage extends StatelessWidget {
 
   signIn(BuildContext context) async {
     final navigator = Navigator.of(context);
+    final ScaffoldMessengerState messenger = ScaffoldMessenger.of(context);
     final user = await AuthService().signInWithGoogle();
     if (user != null) {
+      final response = await Api().postUser(user.user!.displayName);
+      if (response.contains('user created successfully')) {
+        messenger.showSnackBar(
+          SnackBar(
+            content: Text(response),
+          ),
+        );
+      } else {
+        messenger.showSnackBar(
+          SnackBar(
+            content: Text(response),
+          ),
+        );
+      }
       navigator.pushReplacementNamed('/home_page');
     }
   }
